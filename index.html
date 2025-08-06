@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Derivadas Sucesivas y Teorema de Cálculo Central</title>
+   <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <h1>Cálculo Integral y Diferencial</h1>
+  </header>
+
+  <nav>
+    <a href="#derivadas">Derivadas Sucesivas</a>
+    <a href="#teorema">Teorema de Cálculo Central</a>
+  </nav>
+
+  <section id="derivadas">
+    
+    <h2>¿Qué son las Derivadas Sucesivas?</h2>
+    <p>Vamos a analizar que una derivada de orden superior, 
+        también conocida como derivada sucesiva, 
+        es aquella que se obtiene al derivar nuevamente una función ya derivada.
+        Es decir, si partimos de una función f que es derivable, podemos obtener su primera derivada, representada como f’. 
+        Esta se lee como “f prima” o “primera derivada”. A partir de esta, se pueden seguir obteniendo nuevas derivadas, 
+        denominadas en orden como segunda derivada, tercera derivada, cuarta derivada y así sucesivamente, hasta llegar a 
+        la n-ésima derivada.
+</p>
+    <p>
+      Las <strong>derivadas sucesivas</strong> son derivadas que se aplican repetidamente a una función. La primera derivada de una función describe su tasa de cambio instantánea. La segunda derivada describe cómo cambia esa tasa de cambio, y así sucesivamente.
+    </p>
+    <p>
+      Estas derivadas son útiles para analizar el comportamiento de funciones en matemáticas, física e ingeniería, especialmente cuando se estudian movimientos acelerados, curvaturas y optimización.
+    </p>
+    <p>
+      En cálculo diferencial, las <strong>derivadas sucesivas</strong> —también llamadas derivadas de orden superior— son aquellas que se obtienen al derivar una función más de una vez. Si una función \( f(x) \) es derivable, se puede calcular su primera derivada \( f'(x) \). Esta nueva función también puede ser derivada, generando la segunda derivada \( f''(x) \), y así sucesivamente.
+    </p>
+    <p>
+      Cada orden de derivación aporta información distinta sobre la función. La primera derivada indica el crecimiento o decrecimiento de la función. La segunda derivada mide la concavidad y permite identificar máximos y mínimos. Las derivadas de orden superior pueden utilizarse para describir cambios más complejos como la aceleración en física o el comportamiento oscilatorio en ingeniería.
+    </p>
+    <p>
+      Por ejemplo, si una función representa la posición de un objeto, su primera derivada será la velocidad, la segunda la aceleración y la tercera el cambio de aceleración, conocido como "tirón" (jerk).
+    </p>
+    <p>
+      <strong>Ejemplo:</strong><br>
+      Sea la función \( f(x) = x^4 \)<br>
+      Primera derivada: \( f'(x) = 4x^3 \)<br>
+      Segunda derivada: \( f''(x) = 12x^2 \)<br>
+      Tercera derivada: \( f^{(3)}(x) = 24x \)<br>
+      Cuarta derivada: \( f^{(4)}(x) = 24 \)<br>
+      Quinta derivada: \( f^{(5)}(x) = 0 \)
+    </p>
+  </section>
+
+  <section id="teorema">
+  <h2>El Teorema de Cálculo Central</h2>
+  <p>
+    El <strong>Teorema de Cálculo Central</strong>, también conocido como el <strong>Teorema Fundamental del Cálculo</strong>, establece una conexión entre la derivación y la integración. Se divide en dos partes principales:
+  </p>
+  <p>
+    El <strong>Teorema Fundamental del Cálculo (TFC)</strong> establece el vínculo más importante entre la derivación y la integración, las dos operaciones básicas del cálculo. Está compuesto por dos partes:
+  </p>
+  <h3>Primera Parte</h3>
+  <p>
+    Si <em>f(x)</em> es continua en un intervalo cerrado [a, b], y se define una nueva función:
+  </p>
+  <p class="math-block">
+    \[
+      F(x) = \int_a^x f(t) \, dt
+    \]
+  </p>
+  <p>
+    Entonces F es derivable y <span class="math-inline">$F'(x) = f(x)$</span>. Es decir, derivar una integral acumulativa nos devuelve la función original.
+  </p>
+  <h3>Segunda Parte (Regla de Barrow)</h3>
+  <p>
+    Si F es una antiderivada de f, entonces:
+  </p>
+  <p class="math-block">
+    \[
+      \int_a^b f(x) \, dx = F(b) - F(a)
+    \]
+  </p>
+  <p>
+    Esta regla permite calcular integrales definidas usando una antiderivada de la función.
+  </p>
+  <h3>Interpretación y Aplicaciones</h3>
+  <p>
+    Este teorema tiene una interpretación geométrica: la integral definida representa el área bajo la curva de <span class="math-inline">$f(x)$</span> en un intervalo. Al derivar esa acumulación de área, se obtiene nuevamente el valor de la función. Además, es esencial en áreas como física (posición, velocidad, aceleración), economía (acumulación de ingresos), estadística (funciones de distribución acumulada) e ingeniería (trabajo, energía, volúmenes).
+  </p>
+  <p>
+    Es fundamental en el análisis matemático porque une el concepto de derivada con el de integral, mostrando que son operaciones inversas bajo ciertas condiciones.
+  </p>
+  </section>
+  <section id="referencias" >
+  <h2 style=>📚 Referencias</h2>
+  <ol style="line-height: 1.6;">
+    <li>
+      Superprof. (s.f.). <em>Teorema fundamental del cálculo (TFC)</em>. Superprof Apuntes.  
+      <a href="https://www.superprof.es/apuntes/escolar/matematicas/calculo/integrales/teorema-fundamental-del-calculo.html" target="_blank">
+        https://www.superprof.es/apuntes/escolar/matematicas/calculo/integrales/teorema-fundamental-del-calculo.html
+      </a>
+    </li>
+    <li>
+      Universidad de Guanajuato. (s.f.). <em>Clase digital 12. Derivadas sucesivas</em>. Recursos Educativos Abiertos.  
+      <a href="https://blogs.ugto.mx/rea/clase-digital-12-derivadas-sucesivas/#:~:text=Vamos%20a%20estudiar%20que%20una,que%20se%20denota%20por%20f'" target="_blank">
+        https://blogs.ugto.mx/rea/clase-digital-12-derivadas-sucesivas/
+      </a>
+    </li>
+  </ol>
+</section>
+
+  <footer>
+    Página elaborada con fines educativos | Cálculo Integral y Diferencial, UNID
+    <br>by Alamilla & Santoyo
+  </footer>
+</body>
+</html>
